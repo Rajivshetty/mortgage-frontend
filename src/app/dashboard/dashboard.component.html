@@ -1,0 +1,159 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<h3 class="first" style="text-align: center">Mortgage Application </h3>
+<p-tabView>
+  <p-tabPanel header="Apply Loan" leftIcon="pi pi-arrow-right">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <form action="/action_page.php">
+            <div class="form-group">
+              <label for="customerId">Customer ID:</label>
+              <input type="text" class="form-control" id="customerId" placeholder="Customer ID" name="customerId">
+            </div>
+            <div class="form-group">
+              <label for="tenure">Tenure:</label>
+              <input type="text" class="form-control" id="tenure" placeholder="Enter Tenure" name="tenure">
+            </div>
+            <div class="form-group">
+              <label for="principleamt">Principle Amount:</label>
+              <input type="text" class="form-control" id="principleamt" placeholder="Principal Amount"
+                name="principleamt">
+            </div>
+            <button pButton type="button" label="Submit" (click)="applyLoan()"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="My Details" leftIcon="pi pi-arrow-right">
+    Your Account Details.....
+    <div class="card-deck">
+      <div class="card">
+        <img src="assets/img/user1.jpg" style="width: 30%; height: 40%;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Customer Account Details</h5>
+          <p class="card-text"><label> Customer Name: </label> David</p>
+          <p class="card-text"><label> Email ID: </label> david11sone@gmail.com</p>
+          <p class="card-text"><label> Mobile Number: </label> 9535541662</p>
+          <p class="card-text"><label> Account Number: </label> 11111111111</p>
+          <p class="card-text"><label> Account Type: </label> Savings</p>
+          <p class="card-text"><label> Balance: </label> 22222222222</p>
+        </div>
+      </div>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="My Loans" leftIcon="pi pi-arrow-right">
+    Details of your previously applied Loans.......
+  </p-tabPanel>
+  <p-tabPanel header="EMI Calculator" leftIcon="pi pi-arrow-right">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <form action="/action_page.php">
+            <div class="form-group">
+              <label for="amount">Loan Amount:</label>
+              <input type="text" class="form-control" id="amount" placeholder="Enter Loan Amount" name="amount">
+            </div>
+            <div class="form-group">
+              <label for="tenure">Tenure:</label>
+              <input type="text" class="form-control" id="tenure" placeholder="Enter Tenure" name="tenure">
+            </div>
+            <div class="form-group">
+              <label for="interest">Interest Rate:</label>
+              <input type="text" class="form-control" id="interest" placeholder="Interest Rate" name="interest">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-sm-6">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Monthly EMI</th>
+                <th>Principal Amount</th>
+                <th>Interest Amount</th>
+                <th>Total Amount Payable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>12635</td>
+                <td>11234</td>
+                <td>3245</td>
+                <td>13000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Check Loan Eligibility" leftIcon="pi pi-arrow-right">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <form action="/action_page.php">
+            <div class="form-group">
+              <label for="gross">Gross Income Monthly:</label>
+              <input type="text" class="form-control" id="gross" placeholder="Enter Gross Income" name="gross">
+            </div>
+            <div class="form-group">
+              <label for="tenure">Tenure:</label>
+              <input type="text" class="form-control" id="tenure" placeholder="Enter Tenure" name="tenure">
+            </div>
+            <div class="form-group">
+              <label for="interest">Interest Rate:</label>
+              <input type="text" class="form-control" id="interest" placeholder="Interest Rate" name="interest">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-sm-6">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Your Loan Eligibility</th>
+                <th>Your Loan EMI Will be</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>240000</td>
+                <td>4557</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Loan Amortization" leftIcon="pi pi-arrow-right">
+    <div class="container">
+      <div class="row">
+        <caption> Loan Amount : 100000</caption>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Due Date</th>
+              <th>Principal Component of Installment</th>
+              <th>Interest Component of Installment</th>
+              <th>Total Installment Amount</th>
+              <th>Outstanding Loan Amount</th>
+              <th>Rate Of Interest</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10 Oct 2019</td>
+              <td>10000</td>
+              <td>3500</td>
+              <td>13500</td>
+              <td>86500</td>
+              <td>10.49%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </p-tabPanel>
+</p-tabView>
