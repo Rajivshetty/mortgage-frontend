@@ -18,4 +18,9 @@ export class MortgageService {
       )
       .catch((error: any) => Observable.throw(error.json().error || 'Server Error'));
   }
+
+  applyLoan(tenure, principleAmt) {
+    console.log('Apply Loan');
+    return this.http.post('http://100.77.15.18:8080/mortagage/user/applyloan', tenure, principleAmt);
+  }
 }
